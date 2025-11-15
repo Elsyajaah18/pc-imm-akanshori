@@ -2,863 +2,961 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>PC IMM A.K ANSHORI - Web Profile</title>
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC IMM A.K ANSHORI - Web Profile</title>
+    <!-- Ganti favicon.ico dengan path yang benar jika ada -->
+    <link rel="icon" href="https://placehold.co/32x32/800000/FFFFFF?text=IMM" type="image/x-icon" />
 
-	<!-- Tailwind CSS -->
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					colors: {
-						maroon: {
-							50: '#fdf3f3',
-							100: '#f8e0e0',
-							600: '#800000',
-							700: '#660000',
-						},
-					},
-				},
-			},
-		};
-	</script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            50: '#fdf3f3',
+                            100: '#f8e0e0',
+                            600: '#800000',
+                            700: '#660000',
+                        },
+                    },
+                    fontFamily: {
+                        // Menambahkan font Inter
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
-	<!-- SwiperJS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="css/custom.css">
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="js/slider.js"></script>
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-	<!-- Font Awesome untuk ikon -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-	<style>
-		.shadow-soft {
-			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
 
-		.circle-bg {
-			background: radial-gradient(circle, rgba(128, 0, 0, 0.1) 0%, rgba(128, 0, 0, 0.05) 70%, rgba(255, 255, 255, 0) 100%);
-		}
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
-		.stats-card {
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.stats-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-		}
-	</style>
 </head>
 
 <body class="bg-white text-gray-900 font-sans">
-	<!-- HEADER/NAV -->
-	<header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <!-- Logo -->
-        <h1 class="text-xl font-extrabold text-maroon-600 select-none">
-            PC IMM A.K ANSHORI
-        </h1>
+    <!-- HEADER/NAV -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <!-- Logo -->
+            <h1 class="text-xl font-extrabold text-maroon-600 select-none">
+                PC IMM A.K ANSHORI
+            </h1>
 
-        <!-- Hamburger (Mobile Only) -->
-        <button id="drawer-toggle" class="md:hidden text-gray-700 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+            <!-- Hamburger (Mobile Only) -->
+            <button id="drawer-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
 
-        <!-- Navigation (Desktop Only) -->
-        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
-            <a href="#home" class="hover:text-maroon-600 transition-colors">Home</a>
-            <a href="#komisariat" class="hover:text-maroon-600 transition-colors">Komisariat</a>
-            <a href="#artikel" class="hover:text-maroon-600 transition-colors">Artikel</a>
-            <a href="#struktural" class="hover:text-maroon-600 transition-colors">Struktural</a>
-            
-            <!-- Events Dropdown -->
-            <div class="relative group">
-                <button class="hover:text-maroon-600 transition-colors flex items-center">
-                    Events
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <a href="/comingsoon" class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">MASTA</a>
-                    <a href="/comingsoon" class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">Event 2</a>
-                    <a href="/comingsoon" class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">Event 3</a>
+            <!-- Navigation (Desktop Only) -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
+                <a href="#home" class="hover:text-maroon-600 transition-colors">Home</a>
+                <a href="#komisariat" class="hover:text-maroon-600 transition-colors">Komisariat</a>
+                <a href="#artikel" class="hover:text-maroon-600 transition-colors">Artikel</a>
+                <a href="#struktural" class="hover:text-maroon-600 transition-colors">Struktural</a>
+
+                <!-- Events Dropdown -->
+                <div class="relative group">
+                    <button class="hover:text-maroon-600 transition-colors flex items-center">
+                        Events
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <a href="comingsoon.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">MASTA</a>
+                        <a href="comingsoon.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">Event
+                            2</a>
+                        <a href="comingsoon.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-maroon-50 hover:text-maroon-600">Event
+                            3</a>
+                    </div>
                 </div>
+
+                <!-- Coming Soon Button -->
+                <a href="comingsoon.html"
+                    class="bg-maroon-600 text-white px-4 py-2 rounded-full text-sm hover:bg-maroon-700 transition-colors">
+                    Coming Soon
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu (Updated) -->
+    <aside id="drawer"
+        class="fixed top-0 left-0 w-64 h-full bg-white z-50 shadow transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex items-center justify-between px-6 py-4 border-b">
+            <h2 class="text-lg font-bold text-maroon-600">Menu</h2>
+            <button id="drawer-close" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 px-6 py-4 text-maroon-600 font-medium">
+            <!-- Tautan navigasi. Event handler 'onclick' dihapus karena sudah dihandle di script.js -->
+            <a href="#home" class="hover:text-gray-800 transition-colors">Home</a>
+            <a href="#komisariat" class="hover:text-gray-800 transition-colors">Komisariat</a>
+            <a href="#artikel" class="hover:text-gray-800 transition-colors">Artikel</a>
+            <a href="#struktural" class="hover:text-gray-800 transition-colors">Struktural</a>
+            <div class="pt-2 border-t">
+                <p class="text-sm font-semibold text-gray-500 mb-2">Events</p>
+                <a href="comingsoon.html" class="block py-2 pl-4 hover:text-gray-800">MASTA</a>
+                <a href="comingsoon.html" class="block py-2 pl-4 hover:text-gray-800">....</a>
+                <a href="comingsoon.html" class="block py-2 pl-4 hover:text-gray-800">....</a>
             </div>
-            
-            <!-- Coming Soon Button -->
-            <a href="/comingsoon" class="bg-maroon-600 text-white px-4 py-2 rounded-full text-sm hover:bg-maroon-700 transition-colors">
+            <a href="comingsoon.html"
+                class="bg-maroon-600 text-white px-4 py-2 rounded-full text-sm text-center hover:bg-maroon-700 transition-colors mt-4">
                 Coming Soon
             </a>
         </nav>
-    </div>
-</header>
+    </aside>
 
-<!-- Mobile Drawer Menu (Updated) -->
-<aside id="drawer" class="fixed top-0 left-0 w-64 h-full bg-white z-50 shadow transform -translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="flex items-center justify-between px-6 py-4 border-b">
-        <h2 class="text-lg font-bold text-maroon-600">Menu</h2>
-        <button id="drawer-close" class="text-gray-600 hover:text-gray-800 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-    </div>
-    <nav class="flex flex-col space-y-4 px-6 py-4 text-maroon-600 font-medium">
-        <a href="#home" class="hover:text-gray-800 transition-colors" onclick="closeDrawer()">Home</a>
-        <a href="#komisariat" class="hover:text-gray-800 transition-colors" onclick="closeDrawer()">Komisariat</a>
-        <a href="#artikel" class="hover:text-gray-800 transition-colors" onclick="closeDrawer()">Artikel</a>
-        <a href="#struktural" class="hover:text-gray-800 transition-colors" onclick="closeDrawer()">Struktural</a>
-        <div class="pt-2 border-t">
-            <p class="text-sm font-semibold text-gray-500 mb-2">Events</p>
-            <a href="/comingsoon" class="block py-2 pl-4 hover:text-gray-800" onclick="closeDrawer()">MASTA</a>
-            <a href="/comingsoon" class="block py-2 pl-4 hover:text-gray-800" onclick="closeDrawer()">....</a>
-            <a href="/comingsoon" class="block py-2 pl-4 hover:text-gray-800" onclick="closeDrawer()">....</a>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative text-white pb-20 sm:pb-32 overflow-hidden">
+        <!-- Background image layer -->
+        <!-- Pastikan path '/img/bg-imm.jpg' benar atau ganti dengan placeholder -->
+        <div class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('https://placehold.co/1920x1080/333333/555555?text=Latar+Belakang+IMM');">
         </div>
-        <a href="/comingsoon" class="bg-maroon-600 text-white px-4 py-2 rounded-full text-sm text-center hover:bg-maroon-700 transition-colors mt-4" onclick="closeDrawer()">
-            Coming Soon
-        </a>
-    </nav>
-</aside>
-
-	<!-- HERO SECTION -->
-	<section id="home" class="relative text-white pb-20 sm:pb-32 overflow-hidden">
-		<!-- Background image layer -->
-		<div class="absolute inset-0 bg-[url('/img/bg-imm.jpg')] bg-cover bg-center z-0"></div>
-
-		<!-- Semi-transparent maroon overlay -->
-		<div class="absolute inset-0 bg-maroon-600/80 z-10"></div>
-
-		<!-- Content Wrapper -->
-		<div class="relative z-20 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-12 pt-16 lg:pt-24">
-			<!-- Text Content -->
-			<div class="lg:w-1/2 mt-10 lg:mt-0 text-center lg:text-left">
-				<h2 class="text-4xl md:text-5xl font-extrabold leading-tight max-w-xl mx-auto lg:mx-0">
-					PC IMM A.K ANSHORI<br>Purwokerto
-				</h2>
-				<p class="mt-6 max-w-md mx-auto lg:mx-0 opacity-90 text-lg">
-					Wadah perjuangan kader Muhammadiyah dalam mengembangkan intelektual dan spiritual.
-				</p>
-
-				<!-- CTA Button -->
-				<div class="mt-8 flex justify-center lg:justify-start">
-					<a href="#komisariat" class="flex items-center space-x-2 bg-transparent text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400 rounded-full px-6 py-2 font-semibold shadow-sm transition duration-200 ease-in-out">
-						<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="12" cy="12" r="10" stroke-opacity="0.5"></circle>
-							<polygon points="10 8 16 12 10 16 10 8"></polygon>
-						</svg>
-						<span>Show More</span>
-					</a>
-				</div>
-
-				<!-- Stats -->
-				<div class="mt-12 flex flex-col sm:flex-row gap-6 max-w-md mx-auto lg:mx-0">
-					<!-- Kader -->
-					<div class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
-						<div class="icon-circle mb-2 text-maroon-600">
-							<i class="fas fa-users text-2xl"></i>
-						</div>
-						<div class="font-bold text-2xl text-maroon-600">1,500+</div>
-						<div class="text-gray-700 font-semibold">Kader</div>
-					</div>
-
-					<!-- Komisariat -->
-					<div class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
-						<div class="icon-circle mb-2 text-maroon-600">
-							<i class="fas fa-building text-2xl"></i>
-						</div>
-						<div class="font-bold text-2xl text-maroon-600">10</div>
-						<div class="text-gray-700 font-semibold">Komisariat</div>
-					</div>
-
-					<!-- Diresmikan -->
-					<div class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
-						<div class="icon-circle mb-2 text-maroon-600">
-							<i class="fas fa-calendar-alt text-2xl"></i>
-						</div>
-						<div class="font-bold text-2xl text-maroon-600">2025</div>
-						<div class="text-gray-700 font-semibold">Diresmikan</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Hero Image -->
-			<div class="lg:w-1/2 relative mx-auto lg:mx-0">
-				<img src="/img/logo-imm.png" alt="Logo PC IMM AK Anshori" class="h-64 sm:h-80 md:h-[400px] w-auto mx-auto">
-			</div>
-		</div>
-
-		<!-- SVG Wave -->
-		<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
-			<svg class="relative block w-[calc(100%+1.3px)] h-[100px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-				<path d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
-			</svg>
-		</div>
-	</section>
-
-	<!-- KOMISARIAT SECTION -->
-	<section id="komisariat" class="max-w-7xl mx-auto px-6 lg:px-12 mt-24">
-		<div class="text-center mb-16">
-			<h3 class="text-3xl font-extrabold text-maroon-600">10 Komisariat PC IMM A.K ANSHORI</h3>
-			<p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-				Setiap komisariat memiliki karakteristik dan fokus pengembangan yang unik, menyesuaikan dengan bidang keilmuan masing-masing fakultas.
-			</p>
-		</div>
-
-		<div class="flex flex-col lg:flex-row items-center gap-14">
-			<!-- Images grid -->
-			<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-md mx-auto">
-				<!-- Foto 1 -->
-				<div class="aspect-square rounded-lg overflow-hidden bg-indigo-100">
-					<img src="/img/fotage/fotage-1.JPG" alt="Kegiatan Komisariat" class="w-full h-full object-cover">
-				</div>
-
-				<!-- Foto 2 -->
-				<div class="aspect-[3/4] sm:aspect-[2/3] rounded-3xl overflow-hidden bg-purple-400">
-					<img src="/img/fotage/fotage-2.JPG" alt="Diskusi Kader" class="w-full h-full object-cover">
-				</div>
-
-				<!-- Foto 3 -->
-				<div class="aspect-[4/3] rounded-xl overflow-hidden bg-indigo-100">
-					<img src="/img/fotage/fotage-3.JPG" alt="Pelatihan Kader" class="w-full h-full object-cover">
-				</div>
-
-				<!-- Foto 4 -->
-				<div class="aspect-square rounded-full overflow-hidden bg-indigo-100">
-					<img src="/img/fotage/fotage-4.JPG" alt="Kegiatan Sosial" class="w-full h-full object-cover">
-				</div>
-
-				<!-- Foto 5 -->
-				<div class="aspect-square rounded-s-xl overflow-hidden bg-yellow-300 col-span-2 sm:col-span-1">
-					<img src="/img/fotage/fotage-5.JPG" alt="Seminar IMM" class="w-full h-full object-cover">
-				</div>
-
-				<!-- Foto 6 -->
-				<div class="aspect-square rounded-t-lg overflow-hidden bg-indigo-100">
-					<img src="/img/fotage/fotage-6.JPG" alt="Rapat Kader" class="w-full h-full object-cover">
-				</div>
-			</div>
-
-			<!-- Text content -->
-			<div class="lg:w-1/2 space-y-8">
-				<div class="flex flex-col space-y-6">
-					<!-- Komisariat 1 -->
-					<div class="flex items-start space-x-4">
-						<div class="mt-1 w-16 h-16 flex-shrink-0">
-							<img src="/img/logo-komsat/Logo PK IMM KIP.png" alt="Logo Komisariat Ilmu Pendidikan" class="w-full h-full object-contain">
-						</div>
-						<div>
-							<h4 class="font-semibold text-lg text-maroon-600">Komisariat Ilmu Pendidikan</h4>
-							<p class="text-gray-600">
-								Basis kaderisasi di Fakultas Ilmu Pendidikan dan Keguruan yang berfokus pada pembinaan mahasiswa agar menjadi pendidik yang unggul, berintegritas, dan berjiwa kepemimpinan.
-							</p>
-						</div>
-					</div>
-
-					<!-- Komisariat 2 -->
-					<div class="flex items-start space-x-4">
-						<div class="mt-1 w-16 h-16 flex-shrink-0">
-							<img src="/img/logo-komsat/Logo PK IMM Insan Kamil.png" alt="Logo Komisariat Insan Kamil" class="w-full h-full object-contain">
-						</div>
-						<div>
-							<h4 class="font-semibold text-lg text-maroon-600">Komisariat Insan Kamil</h4>
-							<p class="text-gray-600">
-								Wadah kaderisasi di Program Studi Pendidikan Guru Sekolah Dasar (PGSD) yang membentuk karakter mahasiswa sebagai calon pendidik yang berkompeten, humanis, dan visioner.
-							</p>
-						</div>
-					</div>
-
-					<!-- Komisariat 3 -->
-					<div class="flex items-start space-x-4">
-						<div class="mt-1 w-16 h-16 flex-shrink-0">
-							<img src="/img/logo-komsat/Logo PK IMM Buya Hamka.png" alt="Logo Komisariat Buya Hamka" class="w-full h-full object-contain">
-						</div>
-						<div>
-							<h4 class="font-semibold text-lg text-maroon-600">Komisariat Buya Hamka</h4>
-							<p class="text-gray-600">
-								Basis kaderisasi di Fakultas Pendidikan Agama Islam yang berkomitmen mencetak kader intelektual muslim yang moderat, berdedikasi, dan berakhlak mulia.
-							</p>
-						</div>
-					</div>
-
-					<div class="flex items-start space-x-4">
-						<div class="mt-1 w-16 h-16 flex-shrink-0">
-							<img src="/img/logo-komsat/Logo PK IMM Sabits.png" alt="Logo Komisariat SABILUL HASBI TEKNIK dan SAINS" class="w-full h-full object-contain">
-						</div>
-						<div>
-							<h4 class="font-semibold text-lg text-maroon-600">Komisariat SABILUL HASBI TEKNIK dan SAINS</h4>
-							<p class="text-gray-600">
-								Komisariat SABILUL HASBI merupakan pusat kaderisasi di Fakultas Teknik dan Sains yang menjadi wadah pembentukan karakter, intelektual, dan kepemimpinan mahasiswa.
-							</p>
-						</div>
-					</div>
-
-					<div class="flex items-start space-x-4">
-						<div class="mt-1 w-16 h-16 flex-shrink-0">
-							<img src="/img/logo-komsat/Logo PK IMM Farmasi.png" alt="Logo Komisariat Farmasi" class="w-full h-full object-contain">
-						</div>
-						<div>
-							<h4 class="font-semibold text-lg text-maroon-600">Komisariat Farmasi</h4>
-							<p class="text-gray-600">
-								Komisariat Farmasi adalah basis kaderisasi yang berfokus pada pembinaan mahasiswa Fakultas Farmasi agar menjadi kader yang kritis, aktif, dan berintegritas.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- KOMISARIAT SECTION PART 2 -->
-	<section class="max-w-7xl mx-auto px-6 lg:px-12 mt-24 flex flex-col lg:flex-row items-center gap-14">
-		<!-- Text content -->
-		<div class="lg:w-1/2 space-y-8">
-			<div class="flex flex-col space-y-6">
-				<!-- Komisariat 4 -->
-				<div class="flex items-start space-x-4">
-					<div class="mt-1 w-16 h-16 flex-shrink-0">
-						<img src="/img/logo-komsat/Logo PK IMM Fikes.png" alt="Logo Komisariat Ilmu Kesehatan" class="w-full h-full object-contain">
-					</div>
-					<div>
-						<h4 class="font-semibold text-lg text-maroon-600">Komisariat Ilmu Kesehatan</h4>
-						<p class="text-gray-600">
-							Pusat pembinaan kader di Fakultas Ilmu Kesehatan yang berfokus pada pengembangan mahasiswa sebagai insan yang peduli, profesional, dan siap berkontribusi di bidang kesehatan.
-						</p>
-					</div>
-				</div>
-
-				<!-- Komisariat 5 -->
-				<div class="flex items-start space-x-4">
-					<div class="mt-1 w-16 h-16 flex-shrink-0">
-						<img src="/img/logo-komsat/Logo PK IMM Muhammad Al-Fatih.png" alt="Logo Komisariat Muhammad Al Fatih" class="w-full h-full object-contain">
-					</div>
-					<div>
-						<h4 class="font-semibold text-lg text-maroon-600">Komisariat Muhammad Al Fatih</h4>
-						<p class="text-gray-600">
-							Basis kaderisasi lintas fakultas yang menaungi mahasiswa dari Fakultas Hukum, Perikanan dan Pertanian, serta Ilmu Budaya dan Komunikasi.
-						</p>
-					</div>
-				</div>
-
-				<!-- Komisariat 6 -->
-				<div class="flex items-start space-x-4">
-					<div class="mt-1 w-16 h-16 flex-shrink-0">
-						<img src="/img/logo-komsat/Logo PK IMM FEB.png" alt="Logo Komisariat Ekonomi Bisnis" class="w-full h-full object-contain">
-					</div>
-					<div>
-						<h4 class="font-semibold text-lg text-maroon-600">Komisariat Ekonomi Bisnis</h4>
-						<p class="text-gray-600">
-							Basis kaderisasi yang berperan aktif dalam membina dan mengembangkan potensi mahasiswa di lingkungan Fakultas Ekonomi dan Bisnis.
-						</p>
-					</div>
-				</div>
-
-				<div class="flex items-start space-x-4">
-					<div class="mt-1 w-16 h-16 flex-shrink-0">
-						<img src="/img/logo-komsat/Logo PK IMM Psikologi.png" alt="Logo Komisariat Psikologi" class="w-full h-full object-contain">
-					</div>
-					<div>
-						<h4 class="font-semibold text-lg text-maroon-600">Komisariat Psikologi</h4>
-						<p class="text-gray-600">
-							Komisariat Psikologi menjadi ruang pembinaan dan pengembangan mahasiswa Fakultas Psikologi dalam menumbuhkan jiwa kepemimpinan, sosial, dan intelektual.
-						</p>
-					</div>
-				</div>
-
-				<div class="flex items-start space-x-4">
-					<div class="mt-1 w-16 h-16 flex-shrink-0">
-						<img src="/img/logo-komsat/Logo PK IMM Kedokteran.png" alt="Logo Komisariat Kedokteran" class="w-full h-full object-contain">
-					</div>
-					<div>
-						<h4 class="font-semibold text-lg text-maroon-600">Komisariat Kedokteran</h4>
-						<p class="text-gray-600">
-							Komisariat Kedokteran merupakan basis kaderisasi yang membina mahasiswa Fakultas Kedokteran agar mampu berkontribusi aktif dalam ranah keilmuan, sosial, dan kemanusiaan.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Images grid -->
-		<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-md mx-auto">
-			<!-- Foto 8 -->
-			<div class="aspect-square rounded-lg overflow-hidden bg-indigo-100">
-				<img src="/img/fotage/fotage-1.JPG" alt="Kegiatan Ekonomi" class="w-full h-full object-cover">
-			</div>
-
-			<!-- Foto 9 -->
-			<div class="aspect-[3/4] sm:aspect-[2/3] rounded-3xl overflow-hidden bg-purple-400">
-				<img src="/img/fotage/fotage-2.JPG" alt="Diskusi Ekonomi" class="w-full h-full object-cover">
-			</div>
-
-			<!-- Foto 10 -->
-			<div class="aspect-[4/3] rounded-xl overflow-hidden bg-indigo-100">
-				<img src="/img/fotage/fotage-3.JPG" alt="Pelatihan Bisnis" class="w-full h-full object-cover">
-			</div>
-
-			<!-- Foto 11 -->
-			<div class="aspect-square rounded-full overflow-hidden bg-indigo-100">
-				<img src="/img/fotage/fotage-4.JPG" alt="Seminar Ekonomi" class="w-full h-full object-cover">
-			</div>
-
-			<!-- Foto 12 -->
-			<div class="aspect-square rounded-s-xl overflow-hidden bg-yellow-300 col-span-2 sm:col-span-1">
-				<img src="/img/fotage/fotage-5.JPG" alt="Kegiatan Komisariat" class="w-full h-full object-cover">
-			</div>
-
-			<!-- Foto 13 -->
-			<div class="aspect-square rounded-t-lg overflow-hidden bg-indigo-100">
-				<img src="/img/fotage/fotage-6.JPG" alt="Rapat Komisariat" class="w-full h-full object-cover">
-			</div>
-		</div>
-	</section>
-
-	<!-- ARTIKEL SECTION -->
-	<section id="artikel" class="max-w-7xl mx-auto px-6 lg:px-12 mt-32">
-		<div class="text-center mb-12">
-			<h3 class="text-2xl font-bold text-maroon-600">Artikel Kami</h3>
-			<p class="mt-2 text-gray-600 max-w-2xl mx-auto">
-				Kumpulan artikel kegiatan kader PC IMM A.K ANSHORI Purwokerto
-			</p>
-		</div>
-
-		<!-- Slider Container -->
-		<div class="swiper artikel-swiper max-w-6xl mx-auto relative">
-			<div class="swiper-wrapper pb-12">
-				<!-- Slide 1 -->
-				<div class="swiper-slide">
-					<a href="https://pwmjateng.com/imm-ak-anshori-gelar-madrasah-siyasah-cetak-kader-politik-cerdas-dan-berintegritas/" target="_blank" rel="noopener noreferrer" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://pwmjateng.com/wp-content/uploads/2025/07/Gambar-WhatsApp-2025-07-11-pukul-19.45.05_fac3b8c9-780x470.jpg" alt="Kegiatan Madrasah Siyasah" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang HPKP</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">IMM AK. Anshori Gelar Madrasah Siyasah: Cetak Kader Politik Cerdas dan Berintegritas!</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>15 Juni 2023</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<!-- Slide 2 -->
-				<div class="swiper-slide">
-					<a href="https://pwmjateng.com/dari-imm-untuk-bumi-risalah-ekologis-dan-spirit-keislaman/" target="_blank" rel="noopener noreferrer" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://pwmjateng.com/wp-content/uploads/2025/06/Gambar-WhatsApp-2025-06-30-pukul-15.17.48_f7f8e832.jpg" alt="Kegiatan Risalah Ekologis" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">Dari IMM untuk Bumi: Risalah Ekologis dan Spirit Keislaman</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>22 April 2023</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<!-- Slide 3 -->
-				<div class="swiper-slide">
-					<a href="https://medium.com/@k.immumpurwokerto14/pc-imm-ak-anshori-selenggarakan-pelatihan-kepenulisan-jurnalistik-dan-kesehatan-di-gedung-f-ump-2d07de0b633d" target="_blank" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*hBroiMhg1AX982rY2YUQKA.jpeg" alt="Kegiatan Pelatihan Kader" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK, MEDKOM dan Kesehatan</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">PC IMM AK Anshori Selenggarakan Pelatihan Kepenulisan, Jurnalistik, dan Kesehatan</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>10 Maret 2023</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<!-- Slide 4 -->
-				<div class="swiper-slide">
-					<a href="https://medium.com/@k.immumpurwokerto14/pelatihan-tanggap-darurat-bencana-alam-meningkatkan-kapasitas-relawan-anshori-581fcdc65b50" target="_blank" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TKRG-rX8A6BLSs7XbE_Lew.jpeg" alt="Kegiatan Pelatihan Kader" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang Kesehatan</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">Pelatihan Tanggap Darurat Bencana Alam: Meningkatkan Kapasitas Relawan Anshori</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>10 Maret 2023</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<div class="swiper-slide">
-					<a href="https://medium.com/@k.immumpurwokerto14/imm-gelar-pembekalan-ppk-ormawa-perkuat-kapasitas-dan-komitmen-kader-dalam-keilmuan-dan-bf4f57fb2f32" target="_blank" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*UqueYDTdxwKjR6N_TbpGew.jpeg" alt="Kegiatan Pelatihan Kader" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">IMM Gelar Pembekalan PPK Ormawa: Perkuat Kapasitas dan Komitmen Kader dalam Keilmuan dan Kemasyarakatan</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>22 Maret 2025</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<div class="swiper-slide">
-					<a href="https://medium.com/@k.immumpurwokerto14/pc-imm-ak-anshori-gelar-aksi-donor-darah-dalam-rangka-bhakti-sosial-pra-pelantikan-7d0cf845bd6a" target="_blank" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*umuY8tEbLrotzjUe6aIQFg.jpeg" alt="Kegiatan Pelatihan Kader" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">PC IMM A.K ANSHORI</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">PC IMM AK ANSHORI Gelar Aksi Donor Darah dalam Rangka Bhakti Sosial Pra-Pelantikan</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>22 Maret 2025</span>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<div class="swiper-slide">
-					<a href="https://medium.com/@k.immumpurwokerto14/diskusi-politik-dan-buka-bersama-pk-imm-buya-hamka-pk-imm-keb-06391469e826" target="_blank" class="block hover:no-underline">
-						<article class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2">
-							<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*wvReFOxdn9wbfT7c7UMdew.jpeg" alt="Kegiatan Pelatihan Kader" class="rounded-2xl w-full aspect-[5/3] object-cover">
-							<div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">PK IMM Buya Hamka dan Ekonomi Bisnis</div>
-							<h4 class="mt-2 font-bold text-lg leading-tight">Diskusi Politik dan Buka Bersama PK IMM Buya Hamka & PK IMM KEB</h4>
-							<div class="mt-4 flex items-center text-xs text-gray-500">
-								<i class="far fa-calendar-alt mr-2"></i>
-								<span>22 Maret 2025</span>
-							</div>
-						</article>
-					</a>
-				</div>
-			</div>
-
-			<!-- Navigation Buttons -->
-			<div class="swiper-button-prev artikel-prev hidden md:flex"></div>
-			<div class="swiper-button-next artikel-next hidden md:flex"></div>
-
-			<!-- Pagination -->
-			<div class="swiper-pagination mt-6"></div>
-		</div>
-	</section>
-
-	<!-- STRUKTURAL SECTION -->
-	<section class="max-w-7xl mx-auto px-6 lg:px-12 mt-32 flex flex-col lg:flex-row items-center gap-12 scroll-mt-24" id="struktural">
-		<div class="lg:w-1/2 space-y-4">
-			<h3 class="text-3xl font-extrabold text-maroon-600">Kata Pengantar</h3>
-			<p class="text-gray-700">
-				"Assalamu'alaikum Warahmatullahi Wabarakatuh. Puji syukur kehadirat Allah SWT, atas rahmat dan hidayah-Nya, PC IMM A.K Anshori Purwokerto terus berkomitmen untuk mencetak kader-kader unggul yang berakhlak mulia, berwawasan luas, dan memiliki kepedulian sosial."
-			</p>
-			<p class="text-gray-700">
-				"Kami mengajak seluruh kader untuk terus mengembangkan potensi diri, berkontribusi untuk umat, dan menjadi agen perubahan di masyarakat. Bersama kita wujudkan IMM yang progresif, dinamis, dan selalu relevan dengan perkembangan zaman."
-			</p>
-			<div class="mt-6">
-				<h4 class="font-bold text-lg">Ketua Umum PC IMM A.K Anshori</h4>
-				<p class="text-maroon-600 font-semibold">Purwokerto, 2025</p>
-			</div>
-		</div>
-
-		<div class="lg:w-1/2 relative circle-bg rounded-[50%/70%] overflow-hidden aspect-square w-[320px] mx-auto">
-			<img src="/img/PowerClip Rectangle.PNG" alt="Foto Ketua Umum PC IMM A.K Anshori" class="object-cover w-full h-full">
-		</div>
-	</section>
-
-	<!-- BIDANG-BIDANG SECTION -->
-	<section class="mt-32 bg-maroon-50 py-20 rounded-3xl">
-		<div class="text-center mb-12">
-			<h3 class="text-2xl font-bold text-maroon-600">Struktural</h3>
-			<p class="mt-2 text-gray-600 max-w-2xl mx-auto">
-				"Pembagian bidang dilakukan untuk memudahkan pengelolaan tugas, meningkatkan efisiensi, dan memastikan setiap aspek dapat ditangani oleh pihak yang ahli di bidangnya."
-			</p>
-		</div>
-
-		<!-- SLIDER CONTAINER -->
-		<div class="swiper mySwiper max-w-7xl mx-auto px-4 relative">
-			<div class="swiper-wrapper pb-10">
-				<!-- Bidang 1 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/PU.png" alt="Pimpinan Umum" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Pimpinan Umum</h4>
-						<p class="text-sm text-gray-600">Mengambil keputusan strategis untuk kemajuan organisasi.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 2 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/BIDOR.png" alt="Bidang Organisasi" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Organisasi</h4>
-						<p class="text-sm text-gray-600">Mengelola struktur dan keanggotaan organisasi.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 3 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/BIDER.png" alt="Bidang Kaderisasi" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Kaderisasi</h4>
-						<p class="text-sm text-gray-600">Mengelola proses pembinaan dan pengembangan anggota baru.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 4 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/HPKP.png" alt="Bidang HPKP" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Hikmah, Politik, dan Kebijakan Publik</h4>
-						<p class="text-sm text-gray-600">Menganalisis isu-isu politik dan sosial.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 5 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/MEDKOM.png" alt="Bidang Media dan Komunikasi" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Media dan Komunikasi</h4>
-						<p class="text-sm text-gray-600">Mengelola publikasi, informasi, dan media sosial organisasi.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 6 -->
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/RPK.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Riset dan Pengembangan Keilmuan</h4>
-						<p class="text-sm text-gray-600">Melakukan kajian ilmiah dan penelitian.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/TKK.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Tabligh dan Kajian Keislaman</h4>
-						<p class="text-sm text-gray-600">Menyelenggarakan kajian dan dakwah.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/IMMAWATI Hitam.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Immawati (Perempuan)</h4>
-						<p class="text-sm text-gray-600">Menyuarakan isu-isu perempuan di lingkungan organisasi.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/SPM.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Sosial dan Pemberdayaan Masyarakat</h4>
-						<p class="text-sm text-gray-600">Memberdayakan masyarakat secara langsung.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/SBO.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Seni, Budaya, dan Olahraga</h4>
-						<p class="text-sm text-gray-600">Mengembangkan minat dan bakat dalam seni, budaya, dan olahraga.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/EKOWIR.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Ekonomi dan Kewirausahaan</h4>
-						<p class="text-sm text-gray-600">Mengelola unit usaha organisasi dan Membina jiwa wirausaha anggota.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<div class="swiper-slide">
-					<div class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
-						<img src="/img/bidang/BIDKES.png" alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain" loading="lazy">
-						<h4 class="font-bold text-maroon-600">Bidang Kesehatan</h4>
-						<p class="text-sm text-gray-600">Menyelenggarakan program edukasi dan pelayanan kesehatan.</p>
-						<a href="/comingsoon" class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
-							Lihat Detail
-						</a>
-					</div>
-				</div>
-
-				<!-- Bidang 7-12 -->
-				<!-- [Tambahkan bidang lainnya dengan pola yang sama] -->
-
-			</div>
-
-			<!-- Tombol Navigasi -->
-			<div class="swiper-button-prev !left-4 !w-10 !h-10 !bg-maroon-600 !text-white !rounded-full !flex !items-center !justify-center hover:!bg-maroon-700 shadow-lg transition duration-300 z-10 opacity-75 hover:opacity-100"></div>
-			<div class="swiper-button-next !right-4 !w-10 !h-10 !bg-maroon-600 !text-white !rounded-full !flex !items-center !justify-center hover:!bg-maroon-700 shadow-lg transition duration-300 z-10 opacity-75 hover:opacity-100"></div>
-
-			<div class="swiper-pagination mt-6"></div>
-		</div>
-	</section>
-
-	<!-- FOOTER -->
-	<footer class="bg-maroon-700 text-maroon-100 py-16 text-sm">
-		<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-5 gap-12">
-			<div class="space-y-4 md:col-span-2">
-				<h2 class="text-2xl font-extrabold text-white">PC IMM A.K ANSHORI</h2>
-				<p class="text-maroon-200 leading-relaxed">
-					Wadah perjuangan kader Muhammadiyah dalam mengembangkan intelektual dan spiritual untuk mewujudkan masyarakat Islam yang sebenar-benarnya.
-				</p>
-				<div class="flex space-x-4 mt-4">
-					<a href="https://www.instagram.com/pcimm.ak.anshori" aria-label="Instagram" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
-						<i class="fab fa-instagram text-xl"></i>
-					</a>
-					<a href="https://www.tiktok.com/@imm.ak_anshori" aria-label="TikTok" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
-						<i class="fab fa-tiktok text-xl"></i>
-					</a>
-					<a href="https://www.youtube.com/channel/UCe5-wQmCHvaId59tyko5PfQ" aria-label="YouTube" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
-						<i class="fab fa-youtube text-xl"></i>
-					</a>
-					<a href="#" aria-label="Facebook" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
-						<i class="fab fa-facebook text-xl"></i>
-					</a>
-				</div>
-			</div>
-
-			<div>
-				<h5 class="text-white font-semibold mb-3">Menu</h5>
-				<ul class="space-y-2 text-maroon-200">
-					<li><a href="#home" class="hover:text-white transition">Home</a></li>
-					<li><a href="#komisariat" class="hover:text-white transition">Komisariat</a></li>
-					<li><a href="#artikel" class="hover:text-white transition">Artikel</a></li>
-					<li><a href="#struktural" class="hover:text-white transition">Struktural</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h5 class="text-white font-semibold mb-3">Social Media</h5>
-				<ul class="space-y-2 text-maroon-200">
-					<li><a href="https://www.instagram.com/pcimm.ak.anshori" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-					<li><a href="https://www.tiktok.com/@imm.ak_anshori" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">TikTok</a></li>
-					<li><a href="#" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-					<li><a href="https://www.youtube.com/channel/UCe5-wQmCHvaId59tyko5PfQ" class="hover:text-white transition" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h5 class="text-white font-semibold mb-3">Contact Us</h5>
-				<div class="space-y-2 text-maroon-200">
-					<p class="flex items-center">
-						<i class="fas fa-phone-alt mr-2"></i>
-						<a href="tel:+6285225683355" class="hover:text-white transition">+(62) 852-2568-3355</a>
-					</p>
-					<p class="flex items-center">
-						<i class="fas fa-envelope mr-2"></i>
-						<a href="mailto:immcabangpurwokerto@gmail.com" class="hover:text-white transition">immcabangpurwokerto@gmail.com</a>
-					</p>
-					<p class="flex items-start">
-						<i class="fas fa-map-marker-alt mr-2 mt-1"></i>
-						<span>Universitas Muhammadiyah purwokerto, Tegalmulya, Ledug, Kec. Kembaran, Kabupaten Banyumas, Jawa Tengah 53182</span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="border-t border-maroon-600 mt-12 pt-6 text-center text-maroon-300 text-xs">
-			© Copyright © 2025 All rights Reserved - PC IMM A.K ANSHORI Purwokerto
-		</div>
-	</footer>
-
-	<script>
-		// Inisialisasi Swiper
-		const swiper = new Swiper(".mySwiper", {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			loop: true,
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			},
-			breakpoints: {
-				640: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 3,
-				},
-				1024: {
-					slidesPerView: 4,
-				},
-			},
-		});
-
-		// Fungsi untuk Drawer Menu
-		const drawer = document.getElementById("drawer");
-		const overlay = document.getElementById("drawer-overlay");
-		const openBtn = document.getElementById("drawer-toggle");
-		const closeBtn = document.getElementById("drawer-close");
-
-		function openDrawer() {
-			drawer.classList.remove("-translate-x-full");
-			overlay.classList.remove("hidden");
-			document.body.style.overflow = 'hidden';
-		}
-
-		function closeDrawer() {
-			drawer.classList.add("-translate-x-full");
-			overlay.classList.add("hidden");
-			document.body.style.overflow = '';
-		}
-
-		openBtn.addEventListener("click", openDrawer);
-		closeBtn.addEventListener("click", closeDrawer);
-		overlay.addEventListener("click", closeDrawer);
-
-		// Tutup drawer saat mengklik link navigasi
-		document.querySelectorAll('#drawer nav a').forEach(link => {
-			link.addEventListener('click', closeDrawer);
-		});
-
-		// Smooth scrolling untuk semua link
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function(e) {
-				e.preventDefault();
-				const target = document.querySelector(this.getAttribute('href'));
-				if (target) {
-					target.scrollIntoView({
-						behavior: 'smooth'
-					});
-				}
-			});
-		});
-	</script>
+
+        <!-- Semi-transparent maroon overlay -->
+        <div class="absolute inset-0 bg-maroon-600/80 z-10"></div>
+
+        <!-- Content Wrapper -->
+        <div
+            class="relative z-20 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 lg:px-12 pt-16 lg:pt-24">
+            <!-- Text Content -->
+            <div class="lg:w-1/2 mt-10 lg:mt-0 text-center lg:text-left">
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight max-w-xl mx-auto lg:mx-0">
+                    PC IMM A.K ANSHORI<br>Purwokerto
+                </h2>
+                <p class="mt-6 max-w-md mx-auto lg:mx-0 opacity-90 text-lg">
+                    Wadah perjuangan kader Muhammadiyah dalam mengembangkan intelektual dan spiritual.
+                </p>
+
+                <!-- CTA Button -->
+                <div class="mt-8 flex justify-center lg:justify-start">
+                    <a href="#komisariat"
+                        class="flex items-center space-x-2 bg-transparent text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400 rounded-full px-6 py-2 font-semibold shadow-sm transition duration-200 ease-in-out">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" stroke-opacity="0.5"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        <span>Show More</span>
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="mt-12 flex flex-col sm:flex-row gap-6 max-w-md mx-auto lg:mx-0">
+                    <!-- Kader -->
+                    <div
+                        class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
+                        <div class="icon-circle mb-2 text-maroon-600">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <div class="font-bold text-2xl text-maroon-600">1,500+</div>
+                        <div class="text-gray-700 font-semibold">Kader</div>
+                    </div>
+
+                    <!-- Komisariat -->
+                    <div
+                        class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
+                        <div class="icon-circle mb-2 text-maroon-600">
+                            <i class="fas fa-building text-2xl"></i>
+                        </div>
+                        <div class="font-bold text-2xl text-maroon-600">10</div>
+                        <div class="text-gray-700 font-semibold">Komisariat</div>
+                    </div>
+
+                    <!-- Diresmikan -->
+                    <div
+                        class="stats-card p-6 flex flex-col items-center w-full sm:w-1/3 bg-white bg-opacity-90 rounded-xl shadow text-center">
+                        <div class="icon-circle mb-2 text-maroon-600">
+                            <i class="fas fa-calendar-alt text-2xl"></i>
+                        </div>
+                        <div class="font-bold text-2xl text-maroon-600">2025</div>
+                        <div class="text-gray-700 font-semibold">Diresmikan</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="lg:w-1/2 relative mx-auto lg:mx-0">
+                <!-- Pastikan path '/img/logo-imm.png' benar -->
+                <img src="https://placehold.co/400x400/FFFFFF/800000?text=Logo+IMM"
+                    alt="Logo PC IMM AK Anshori" class="h-64 sm:h-80 md:h-[400px] w-auto mx-auto"
+                    onerror="this.src='https://placehold.co/400x400/FFFFFF/800000?text=Logo+IMM'; this.onerror=null;">
+            </div>
+        </div>
+
+        <!-- SVG Wave -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[100px]" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- KOMISARIAT SECTION -->
+    <section id="komisariat" class="max-w-7xl mx-auto px-6 lg:px-12 mt-24 scroll-mt-20">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-extrabold text-maroon-600">10 Komisariat PC IMM A.K ANSHORI</h3>
+            <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                Setiap komisariat memiliki karakteristik dan fokus pengembangan yang unik, menyesuaikan dengan bidang
+                keilmuan masing-masing fakultas.
+            </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center gap-14">
+            <!-- Images grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-md mx-auto">
+                <!-- Foto 1 -->
+                <div class="aspect-square rounded-lg overflow-hidden bg-indigo-100">
+                    <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+1" alt="Kegiatan Komisariat"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Foto 2 -->
+                <div class="aspect-[3/4] sm:aspect-[2/3] rounded-3xl overflow-hidden bg-purple-400">
+                    <img src="https://placehold.co/300x400/CCCCCC/777777?text=Foto+2" alt="Diskusi Kader"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Foto 3 -->
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-indigo-100">
+                    <img src="https://placehold.co/400x300/CCCCCC/777777?text=Foto+3" alt="Pelatihan Kader"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Foto 4 -->
+                <div class="aspect-square rounded-full overflow-hidden bg-indigo-100">
+                    <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+4" alt="Kegiatan Sosial"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Foto 5 -->
+                <div class="aspect-square rounded-s-xl overflow-hidden bg-yellow-300 col-span-2 sm:col-span-1">
+                    <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+5" alt="Seminar IMM"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Foto 6 -->
+                <div class="aspect-square rounded-t-lg overflow-hidden bg-indigo-100">
+                    <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+6" alt="Rapat Kader"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Text content -->
+            <div class="lg:w-1/2 space-y-8">
+                <div class="flex flex-col space-y-6">
+                    <!-- Komisariat 1 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 w-16 h-16 flex-shrink-0">
+                            <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                                alt="Logo Komisariat Ilmu Pendidikan" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-maroon-600">Komisariat Ilmu Pendidikan</h4>
+                            <p class="text-gray-600">
+                                Basis kaderisasi di Fakultas Ilmu Pendidikan dan Keguruan yang berfokus pada pembinaan
+                                mahasiswa agar menjadi pendidik yang unggul, berintegritas, dan berjiwa kepemimpinan.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Komisariat 2 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 w-16 h-16 flex-shrink-0">
+                            <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                                alt="Logo Komisariat Insan Kamil" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-maroon-600">Komisariat Insan Kamil</h4>
+                            <p class="text-gray-600">
+                                Wadah kaderisasi di Program Studi Pendidikan Guru Sekolah Dasar (PGSD) yang membentuk
+                                karakter mahasiswa sebagai calon pendidik yang berkompeten, humanis, dan visioner.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Komisariat 3 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 w-16 h-16 flex-shrink-0">
+                            <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                                alt="Logo Komisariat Buya Hamka" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-maroon-600">Komisariat Buya Hamka</h4>
+                            <p class="text-gray-600">
+                                Basis kaderisasi di Fakultas Pendidikan Agama Islam yang berkomitmen mencetak kader
+                                intelektual muslim yang moderat, berdedikasi, dan berakhlak mulia.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Komisariat 4 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 w-16 h-16 flex-shrink-0">
+                            <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                                alt="Logo Komisariat SABILUL HASBI TEKNIK dan SAINS"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-maroon-600">Komisariat SABILUL HASBI TEKNIK dan SAINS
+                            </h4>
+                            <p class="text-gray-600">
+                                Komisariat SABILUL HASBI merupakan pusat kaderisasi di Fakultas Teknik dan Sains yang
+                                menjadi wadah pembentukan karakter, intelektual, dan kepemimpinan mahasiswa.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Komisariat 5 -->
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 w-16 h-16 flex-shrink-0">
+                            <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo" alt="Logo Komisariat Farmasi"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-maroon-600">Komisariat Farmasi</h4>
+                            <p class="text-gray-600">
+                                Komisariat Farmasi adalah basis kaderisasi yang berfokus pada pembinaan mahasiswa
+                                Fakultas Farmasi agar menjadi kader yang kritis, aktif, dan berintegritas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KOMISARIAT SECTION PART 2 -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 mt-24 flex flex-col lg:flex-row items-center gap-14">
+        <!-- Text content -->
+        <div class="lg:w-1/2 space-y-8">
+            <div class="flex flex-col space-y-6">
+                <!-- Komisariat 6 -->
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 w-16 h-16 flex-shrink-0">
+                        <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                            alt="Logo Komisariat Ilmu Kesehatan" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-maroon-600">Komisariat Ilmu Kesehatan</h4>
+                        <p class="text-gray-600">
+                            Pusat pembinaan kader di Fakultas Ilmu Kesehatan yang berfokus pada pengembangan mahasiswa
+                            sebagai insan yang peduli, profesional, dan siap berkontribusi di bidang kesehatan.
+                        </p>
+                    </div>
+                </div>
+                <!-- Komisariat 7 -->
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 w-16 h-16 flex-shrink-0">
+                        <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                            alt="Logo Komisariat Muhammad Al Fatih" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-maroon-600">Komisariat Muhammad Al Fatih</h4>
+                        <p class="text-gray-600">
+                            Basis kaderisasi lintas fakultas yang menaungi mahasiswa dari Fakultas Hukum, Perikanan dan
+                            Pertanian, serta Ilmu Budaya dan Komunikasi.
+                        </p>
+                    </div>
+                </div>
+                <!-- Komisariat 8 -->
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 w-16 h-16 flex-shrink-0">
+                        <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                            alt="Logo Komisariat Ekonomi Bisnis" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-maroon-600">Komisariat Ekonomi Bisnis</h4>
+                        <p class="text-gray-600">
+                            Basis kaderisasi yang berperan aktif dalam membina dan mengembangkan potensi mahasiswa di
+                            lingkungan Fakultas Ekonomi dan Bisnis.
+                        </p>
+                    </div>
+                </div>
+                <!-- Komisariat 9 -->
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 w-16 h-16 flex-shrink-0">
+                        <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo" alt="Logo Komisariat Psikologi"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-maroon-600">Komisariat Psikologi</h4>
+                        <p class="text-gray-600">
+                            Komisariat Psikologi menjadi ruang pembinaan dan pengembangan mahasiswa Fakultas Psikologi
+                            dalam menumbuhkan jiwa kepemimpinan, sosial, dan intelektual.
+                        </p>
+                    </div>
+                </div>
+                <!-- Komisariat 10 -->
+                <div class="flex items-start space-x-4">
+                    <div class="mt-1 w-16 h-16 flex-shrink-0">
+                        <img src="https://placehold.co/100x100/FFFFFF/800000?text=Logo"
+                            alt="Logo Komisariat Kedokteran" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-maroon-600">Komisariat Kedokteran</h4>
+                        <p class="text-gray-600">
+                            Komisariat Kedokteran merupakan basis kaderisasi yang membina mahasiswa Fakultas Kedokteran
+                            agar mampu berkontribusi aktif dalam ranah keilmuan, sosial, dan kemanusiaan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Images grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-md mx-auto">
+            <!-- Foto 8 -->
+            <div class="aspect-square rounded-lg overflow-hidden bg-indigo-100">
+                <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+7" alt="Kegiatan Ekonomi"
+                    class="w-full h-full object-cover">
+            </div>
+            <!-- Foto 9 -->
+            <div class="aspect-[3/4] sm:aspect-[2/3] rounded-3xl overflow-hidden bg-purple-400">
+                <img src="https://placehold.co/300x400/CCCCCC/777777?text=Foto+8" alt="Diskusi Ekonomi"
+                    class="w-full h-full object-cover">
+            </div>
+            <!-- Foto 10 -->
+            <div class="aspect-[4/3] rounded-xl overflow-hidden bg-indigo-100">
+                <img src="https://placehold.co/400x300/CCCCCC/777777?text=Foto+9" alt="Pelatihan Bisnis"
+                    class="w-full h-full object-cover">
+            </div>
+            <!-- Foto 11 -->
+            <div class="aspect-square rounded-full overflow-hidden bg-indigo-100">
+                <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+10" alt="Seminar Ekonomi"
+                    class="w-full h-full object-cover">
+            </div>
+            <!-- Foto 12 -->
+            <div class="aspect-square rounded-s-xl overflow-hidden bg-yellow-300 col-span-2 sm:col-span-1">
+                <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+11" alt="Kegiatan Komisariat"
+                    class="w-full h-full object-cover">
+            </div>
+            <!-- Foto 13 -->
+            <div class="aspect-square rounded-t-lg overflow-hidden bg-indigo-100">
+                <img src="https://placehold.co/300x300/CCCCCC/777777?text=Foto+12" alt="Rapat Komisariat"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTIKEL SECTION -->
+    <section id="artikel" class="max-w-7xl mx-auto px-6 lg:px-12 mt-32 scroll-mt-20">
+        <div class="text-center mb-12">
+            <h3 class="text-2xl font-bold text-maroon-600">Artikel Kami</h3>
+            <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+                Kumpulan artikel kegiatan kader PC IMM A.K ANSHORI Purwokerto
+            </p>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="swiper artikel-swiper max-w-6xl mx-auto relative px-4">
+            <div class="swiper-wrapper pb-12">
+                <!-- Slide 1 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://pwmjateng.com/imm-ak-anshori-gelar-madrasah-siyasah-cetak-kader-politik-cerdas-dan-berintegritas/"
+                        target="_blank" rel="noopener noreferrer" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://pwmjateng.com/wp-content/uploads/2025/07/Gambar-WhatsApp-2025-07-11-pukul-19.45.05_fac3b8c9-780x470.jpg"
+                                alt="Kegiatan Madrasah Siyasah"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Madrasah+Siyasah'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang HPKP</div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">IMM AK. Anshori Gelar Madrasah
+                                Siyasah: Cetak Kader Politik Cerdas dan Berintegritas!</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>15 Juni 2023</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://pwmjateng.com/dari-imm-untuk-bumi-risalah-ekologis-dan-spirit-keislaman/"
+                        target="_blank" rel="noopener noreferrer" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://pwmjateng.com/wp-content/uploads/2025/06/Gambar-WhatsApp-2025-06-30-pukul-15.17.48_f7f8e832.jpg"
+                                alt="Kegiatan Risalah Ekologis"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Risalah+Ekologis'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK</div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">Dari IMM untuk Bumi: Risalah
+                                Ekologis dan Spirit Keislaman</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>22 April 2023</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://medium.com/@k.immumpurwokerto14/pc-imm-ak-anshori-selenggarakan-pelatihan-kepenulisan-jurnalistik-dan-kesehatan-di-gedung-f-ump-2d07de0b633d"
+                        target="_blank" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*hBroiMhg1AX982rY2YUQKA.jpeg"
+                                alt="Kegiatan Pelatihan Kader"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Pelatihan+Kader'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK, MEDKOM
+                                dan Kesehatan</div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">PC IMM AK Anshori Selenggarakan
+                                Pelatihan Kepenulisan, Jurnalistik, dan Kesehatan</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>10 Maret 2023</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://medium.com/@k.immumpurwokerto14/pelatihan-tanggap-darurat-bencana-alam-meningkatkan-kapasitas-relawan-anshori-581fcdc65b50"
+                        target="_blank" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TKRG-rX8A6BLSs7XbE_Lew.jpeg"
+                                alt="Kegiatan Pelatihan Kader"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Tanggap+Bencana'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang Kesehatan
+                            </div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">Pelatihan Tanggap Darurat Bencana
+                                Alam: Meningkatkan Kapasitas Relawan Anshori</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>10 Maret 2023</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://medium.com/@k.immumpurwokerto14/imm-gelar-pembekalan-ppk-ormawa-perkuat-kapasitas-dan-komitmen-kader-dalam-keilmuan-dan-bf4f57fb2f32"
+                        target="_blank" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*UqueYDTdxwKjR6N_TbpGew.jpeg"
+                                alt="Kegiatan Pelatihan Kader"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=PPK+Ormawa'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">Bidang RPK</div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">IMM Gelar Pembekalan PPK Ormawa:
+                                Perkuat Kapasitas dan Komitmen Kader dalam Keilmuan dan Kemasyarakatan</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>22 Maret 2025</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://medium.com/@k.immumpurwokerto14/pc-imm-ak-anshori-gelar-aksi-donor-darah-dalam-rangka-bhakti-sosial-pra-pelantikan-7d0cf845bd6a"
+                        target="_blank" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*umuY8tEbLrotzjUe6aIQFg.jpeg"
+                                alt="Kegiatan Pelatihan Kader"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Donor+Darah'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">PC IMM A.K ANSHORI
+                            </div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">PC IMM AK ANSHORI Gelar Aksi Donor
+                                Darah dalam Rangka Bhakti Sosial Pra-Pelantikan</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>22 Maret 2025</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide h-auto">
+                    <a href="https://medium.com/@k.immumpurwokerto14/diskusi-politik-dan-buka-bersama-pk-imm-buya-hamka-pk-imm-keb-06391469e826"
+                        target="_blank" class="block hover:no-underline h-full">
+                        <article
+                            class="bg-white rounded-3xl shadow-soft p-6 hover:shadow-maroon-400/60 transition-shadow cursor-pointer h-full mx-2 flex flex-col">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*wvReFOxdn9wbfT7c7UMdew.jpeg"
+                                alt="Kegiatan Pelatihan Kader"
+                                class="rounded-2xl w-full aspect-[5/3] object-cover"
+                                onerror="this.src='https://placehold.co/780x470/CCCCCC/777777?text=Diskusi+Politik'; this.onerror=null;">
+                            <div class="mt-4 text-sm text-maroon-600 font-semibold tracking-widest">PK IMM Buya Hamka
+                                dan Ekonomi Bisnis</div>
+                            <h4 class="mt-2 font-bold text-lg leading-tight flex-grow">Diskusi Politik dan Buka Bersama
+                                PK IMM Buya Hamka & PK IMM KEB</h4>
+                            <div class="mt-4 flex items-center text-xs text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>22 Maret 2025</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-prev artikel-prev hidden md:flex"></div>
+            <div class="swiper-button-next artikel-next hidden md:flex"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-6"></div>
+        </div>
+    </section>
+
+    <!-- STRUKTURAL SECTION -->
+    <section
+        class="max-w-7xl mx-auto px-6 lg:px-12 mt-32 flex flex-col lg:flex-row items-center gap-12 scroll-mt-20"
+        id="struktural">
+        <div class="lg:w-1/2 space-y-4">
+            <h3 class="text-3xl font-extrabold text-maroon-600">Kata Pengantar</h3>
+            <p class="text-gray-700">
+                "Assalamu'alaikum Warahmatullahi Wabarakatuh. Puji syukur kehadirat Allah SWT, atas rahmat dan
+                hidayah-Nya, PC IMM A.K Anshori Purwokerto terus berkomitmen untuk mencetak kader-kader unggul yang
+                berakhlak mulia, berwawasan luas, dan memiliki kepedulian sosial."
+            </p>
+            <p class="text-gray-700">
+                "Kami mengajak seluruh kader untuk terus mengembangkan potensi diri, berkontribusi untuk umat, dan
+                menjadi agen perubahan di masyarakat. Bersama kita wujudkan IMM yang progresif, dinamis, dan selalu
+                relevan dengan perkembangan zaman."
+            </p>
+            <div class="mt-6">
+                <h4 class="font-bold text-lg">Ketua Umum PC IMM A.K Anshori</h4>
+                <p class="text-maroon-600 font-semibold">Purwokerto, 2025</p>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 relative circle-bg rounded-[50%/70%] overflow-hidden aspect-square w-[320px] mx-auto">
+            <img src="https://placehold.co/400x400/CCCCCC/777777?text=Foto+Ketua+Umum"
+                alt="Foto Ketua Umum PC IMM A.K Anshori" class="object-cover w-full h-full">
+        </div>
+    </section>
+
+    <!-- BIDANG-BIDANG SECTION -->
+    <section class="mt-32 bg-maroon-50 py-20 rounded-3xl">
+        <div class="text-center mb-12">
+            <h3 class="text-2xl font-bold text-maroon-600">Struktural</h3>
+            <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+                "Pembagian bidang dilakukan untuk memudahkan pengelolaan tugas, meningkatkan efisiensi, dan memastikan
+                setiap aspek dapat ditangani oleh pihak yang ahli di bidangnya."
+            </p>
+        </div>
+
+        <!-- SLIDER CONTAINER -->
+        <div class="swiper mySwiper max-w-7xl mx-auto px-4 relative">
+            <div class="swiper-wrapper pb-10">
+                <!-- Bidang 1 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=PU" alt="Pimpinan Umum"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Pimpinan Umum</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengambil keputusan strategis untuk kemajuan
+                            organisasi.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 2 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=BIDOR" alt="Bidang Organisasi"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Organisasi</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengelola struktur dan keanggotaan organisasi.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 3 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=BIDER" alt="Bidang Kaderisasi"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Kaderisasi</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengelola proses pembinaan dan pengembangan anggota
+                            baru.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 4 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=HPKP" alt="Bidang HPKP"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Hikmah, Politik, dan Kebijakan Publik</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Menganalisis isu-isu politik dan sosial.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 5 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=MEDKOM"
+                            alt="Bidang Media dan Komunikasi" class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Media dan Komunikasi</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengelola publikasi, informasi, dan media sosial
+                            organisasi.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 6 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=RPK"
+                            alt="Bidang Riset dan Pengembangan Keilmuan" class="w-36 h-36 object-contain"
+                            loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Riset dan Pengembangan Keilmuan</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Melakukan kajian ilmiah dan penelitian.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 7 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=TKK"
+                            alt="Bidang Tabligh dan Kajian Keislaman" class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Tabligh dan Kajian Keislaman</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Menyelenggarakan kajian dan dakwah.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 8 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=IMMAWATI" alt="Bidang Immawati"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Immawati (Perempuan)</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Menyuarakan isu-isu perempuan di lingkungan
+                            organisasi.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 9 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=SPM"
+                            alt="Bidang Sosial dan Pemberdayaan Masyarakat" class="w-36 h-36 object-contain"
+                            loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Sosial dan Pemberdayaan Masyarakat</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Memberdayakan masyarakat secara langsung.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 10 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=SBO"
+                            alt="Bidang Seni, Budaya, dan Olahraga" class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Seni, Budaya, dan Olahraga</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengembangkan minat dan bakat dalam seni, budaya, dan
+                            olahraga.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 11 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=EKOWIR"
+                            alt="Bidang Ekonomi dan Kewirausahaan" class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Ekonomi dan Kewirausahaan</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Mengelola unit usaha organisasi dan Membina jiwa
+                            wirausaha anggota.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bidang 12 -->
+                <div class="swiper-slide h-auto">
+                    <div
+                        class="bg-white border border-maroon-600 rounded-3xl flex flex-col items-center p-6 space-y-4 shadow-lg shadow-maroon-400/50 hover:shadow-xl transition-shadow cursor-pointer text-center h-full">
+                        <img src="https://placehold.co/144x144/FFFFFF/800000?text=BIDKES" alt="Bidang Kesehatan"
+                            class="w-36 h-36 object-contain" loading="lazy">
+                        <h4 class="font-bold text-maroon-600">Bidang Kesehatan</h4>
+                        <p class="text-sm text-gray-600 flex-grow">Menyelenggarakan program edukasi dan pelayanan
+                            kesehatan.</p>
+                        <a href="comingsoon.html"
+                            class="bg-maroon-600 text-white text-sm px-4 py-1 rounded-full hover:bg-maroon-700 transition mt-auto inline-block w-full max-w-[120px] mx-auto">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div
+                class="swiper-button-prev !left-4 !w-10 !h-10 !bg-maroon-600 !text-white !rounded-full !flex !items-center !justify-center hover:!bg-maroon-700 shadow-lg transition duration-300 z-10 opacity-75 hover:opacity-100">
+            </div>
+            <div
+                class="swiper-button-next !right-4 !w-10 !h-10 !bg-maroon-600 !text-white !rounded-full !flex !items-center !justify-center hover:!bg-maroon-700 shadow-lg transition duration-300 z-10 opacity-75 hover:opacity-100">
+            </div>
+
+            <div class="swiper-pagination mt-6"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-maroon-700 text-maroon-100 py-16 text-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-5 gap-12">
+            <div class="space-y-4 md:col-span-2">
+                <h2 class="text-2xl font-extrabold text-white">PC IMM A.K ANSHORI</h2>
+                <p class="text-maroon-200 leading-relaxed">
+                    Wadah perjuangan kader Muhammadiyah dalam mengembangkan intelektual dan spiritual untuk mewujudkan
+                    masyarakat Islam yang sebenar-benarnya.
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.instagram.com/pcimm.ak.anshori" aria-label="Instagram"
+                        class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@imm.ak_anshori" aria-label="TikTok"
+                        class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCe5-wQmCHvaId59tyko5PfQ" aria-label="YouTube"
+                        class="hover:text-white transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="hover:text-white transition" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="text-white font-semibold mb-3">Menu</h5>
+                <ul class="space-y-2 text-maroon-200">
+                    <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#komisariat" class="hover:text-white transition">Komisariat</a></li>
+                    <li><a href="#artikel" class="hover:text-white transition">Artikel</a></li>
+                    <li><a href="#struktural" class="hover:text-white transition">Struktural</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-white font-semibold mb-3">Social Media</h5>
+                <ul class="space-y-2 text-maroon-200">
+                    <li><a href="https://www.instagram.com/pcimm.ak.anshori" class="hover:text-white transition"
+                            target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@imm.ak_anshori" class="hover:text-white transition"
+                            target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                    <li><a href="#" class="hover:text-white transition" target="_blank"
+                            rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCe5-wQmCHvaId59tyko5PfQ"
+                            class="hover:text-white transition" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-white font-semibold mb-3">Contact Us</h5>
+                <div class="space-y-2 text-maroon-200">
+                    <p class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <a href="tel:+6285225683355" class="hover:text-white transition">+(62) 852-2568-3355</a>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:immcabangpurwokerto@gmail.com"
+                            class="hover:text-white transition">immcabangpurwokerto@gmail.com</a>
+                    </p>
+                    <p class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                        <span>Universitas Muhammadiyah purwokerto, Tegalmulya, Ledug, Kec. Kembaran, Kabupaten Banyumas,
+                            Jawa Tengah 53182</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-maroon-600 mt-12 pt-6 text-center text-maroon-300 text-xs">
+            © Copyright © 2025 All rights Reserved - PC IMM A.K ANSHORI Purwokerto
+        </div>
+    </footer>
+
+    <!-- SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS (termasuk Swiper init, drawer, dan smooth scroll) -->
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
