@@ -1,0 +1,84 @@
+/* Style kustom yang sebelumnya ada di inline <style> tag Anda.
+*/
+.shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.circle-bg {
+    background: radial-gradient(circle, rgba(128, 0, 0, 0.1) 0%, rgba(128, 0, 0, 0.05) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
+.stats-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Style kustom untuk tombol navigasi slider "Artikel".
+  Tombol ini akan menggunakan ikon bawaan Swiper.
+*/
+.artikel-prev,
+.artikel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    /* 40px */
+    height: 2.5rem;
+    /* 40px */
+    background-color: #800000;
+    /* maroon-600 */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.artikel-prev:hover,
+.artikel-next:hover {
+    background-color: #660000;
+    /* maroon-700 */
+}
+
+/* Posisi tombol sedikit di luar container */
+.artikel-prev {
+    left: -1rem;
+}
+
+.artikel-next {
+    right: -1rem;
+}
+
+/* Menggunakan font ikon dari Swiper */
+.artikel-prev::after,
+.artikel-next::after {
+    font-family: 'swiper-icons';
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.artikel-prev::after {
+    content: 'prev';
+}
+
+.artikel-next::after {
+    content: 'next';
+}
+
+/* Menyesuaikan posisi di layar yang lebih besar */
+@media (min-width: 768px) {
+    .artikel-prev {
+        left: -1.5rem;
+    }
+
+    .artikel-next {
+        right: -1.5rem;
+    }
+}
